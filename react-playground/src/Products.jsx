@@ -65,15 +65,12 @@ function Products() {
   // const filteredLaptopOs = os ? LaptopData.filter((p)=>p.OS === os):LaptopData;
 
   const brandFilter = ((e)=> {
-    if(e.target.value === ""){  nav('/Products')}
-    else{nav('/Products/brand/'+(e.target.value))}
+    (e.target.value === "")?(  nav('/Products')):(nav('/Products/brand/'+(e.target.value)))
 })
 
 const ramFilter = ((e)=> {
-  if(e.target.value === ""){  nav('/Products');}
-  else{nav('/Products/ram/'+(e.target.value));}
+  (e.target.value === "") ?(nav('/Products')):(nav('/Products/ram/'+(e.target.value)))
 })
-    
 
   return (
     <div className="App">
